@@ -11,8 +11,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (gameObject.CompareTag("Player1"))
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        else if (gameObject.CompareTag("Player2"))
+        {
+            movement.x = Input.GetAxisRaw("Horizontal2");
+            movement.y = Input.GetAxisRaw("Vertical2");
+        }
     }
 
     void FixedUpdate()
