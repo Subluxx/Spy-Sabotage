@@ -16,7 +16,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (activated == false)
         {
-            SpikeTrap.spike = true;
+            //SpikeTrap.spike = true;
             activated = true;
             yield return new WaitForSeconds(10f);
             activated = false;
