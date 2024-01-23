@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
+    public Transform SpawnPos;
 
     void Update()
     {
@@ -26,6 +27,14 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ( collision.collider.CompareTag("Trap"))
+        {
+            transform.position = SpawnPos.position;
+        }
     }
 }
 
