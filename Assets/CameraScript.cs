@@ -3,23 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
-    public Transform attachedPlayer;
-    public float blendAmount = 0.05f;
-    Vector3 curPos;
-    Vector3 targetPos;
-    float zVal;
-    // Use this for initialization
-    void Start()
+    public Transform assignedPlayer;
+    private void LateUpdate()
     {
-        curPos = transform.position;
-        zVal = curPos.z;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        targetPos = attachedPlayer.transform.position;
-        curPos = targetPos * blendAmount + curPos * (1.0f - blendAmount);
-        curPos.z = zVal;
-        transform.position = curPos;
+        Vector3 newPos = new Vector3(assignedPlayer.position.x, transform.position.y, -10);
+        transform.position = newPos;
     }
 }
