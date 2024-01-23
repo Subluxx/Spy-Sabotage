@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject trap;
+    public GameObject SpikeTrap;
     bool activated = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,10 +16,9 @@ public class PressurePlate : MonoBehaviour
     {
         if (activated == false)
         {
-            trap.SetActive(true);
+            SpikeTrap.spike = true;
             activated = true;
-            yield return new WaitForSeconds(3f);
-            trap.SetActive(false);
+            yield return new WaitForSeconds(10f);
             activated = false;
 
         }
