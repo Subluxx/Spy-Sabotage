@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
         // normalizes the player input vector, makes diagonal movement not as fast
         if (gameObject.CompareTag("Player1")) playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        if (gameObject.CompareTag("Player2")) playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (gameObject.CompareTag("Player2")) playerInput = new Vector2(Input.GetAxisRaw("Horizontal2"), Input.GetAxisRaw("Vertical2")).normalized;
 
         // the move force vector is multiplied by the specified speed
         Vector2 moveForce = playerInput * moveSpeed;
