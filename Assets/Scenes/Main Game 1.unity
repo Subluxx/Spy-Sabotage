@@ -48204,7 +48204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492545906f8d56438caef4c7b3263fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceToApply: {x: 0, y: 0}
   moveSpeed: 4
+  forceDamping: 0.01
   rb: {fileID: 1750278166}
   SpawnPos: {fileID: 1240053029}
 --- !u!61 &1750278165
@@ -48574,7 +48576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492545906f8d56438caef4c7b3263fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceToApply: {x: 0, y: 0}
   moveSpeed: 5
+  forceDamping: 0
   rb: {fileID: 1935817966}
   SpawnPos: {fileID: 1455285471}
 --- !u!212 &1935817968
