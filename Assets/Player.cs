@@ -17,38 +17,32 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-
         anim.SetFloat("xspeed", rb.velocity.x);
         anim.SetFloat("yspeed", rb.velocity.y);
         if (rb.velocity.magnitude < 0.01)
         {
-           // anim.speed = 0.0f;
+           anim.speed = 0.0f;
         }
         else
         {
             anim.speed = 1.0f;
         }
-        Debug.Log(rb.velocity);
-    }
 
-    void FixedUpdate()
-    {
         if (gameObject.CompareTag("Player1"))
         {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * moveSpeed;
-            if (rb.velocity.magnitude > moveSpeed)
-            {
-                rb.velocity = rb.velocity.normalized * moveSpeed;
-            }
         }
         else if (gameObject.CompareTag("Player2"))
         {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2")) * moveSpeed;
-            if (rb.velocity.magnitude > moveSpeed)
-            {
-                rb.velocity = rb.velocity.normalized * moveSpeed;
-            }
         }
+
+        Debug.Log("Velocity: " + rb.velocity);
+        Debug.Log("Anim Speed " + anim.speed);
+    }
+
+    void FixedUpdate()
+    {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
