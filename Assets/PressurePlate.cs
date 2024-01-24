@@ -14,7 +14,7 @@ public class PressurePlate : MonoBehaviour
         foreach (GameObject trap in traps)
         {
             trap.GetComponent<SpikeTrap>().playAnimation(activeTime);
-            Debug.Log("Foreach Loop");
+            Console.WriteLine("ForeachLoop");
         }
     }
 }
