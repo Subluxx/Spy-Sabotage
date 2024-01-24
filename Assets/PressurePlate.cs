@@ -2,25 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject SpikeTrap;
-    bool activated = false;
+    [SerializeField] List<GameObject> traps = new List<GameObject>();  
+    public float activeTime;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(PressurePlateTriggered());
-    }
-    public IEnumerator PressurePlateTriggered()
-    {
-        if (activated == false)
+        foreach (GameObject trap in traps)
         {
-            SpikeTrap.spike = true;
-            activated = true;
-            yield return new WaitForSeconds(10f);
-            activated = false;
-
+            trap.GetComponent<SpikeTrap>().playAnimation(activeTime);
+            Debug.Log("Foreach Loop");
         }
     }
 }

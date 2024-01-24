@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if ( collision.collider.CompareTag("Trap"))
+        if (collision.collider.CompareTag("Trap1"))
         {
             transform.position = SpawnPos.position;
         }

@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Player1
   - Player2
-  - Trap
+  - Trap1
+  - Trap2
   layers:
   - Default
   - TransparentFX
