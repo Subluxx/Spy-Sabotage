@@ -9,15 +9,20 @@ public class StartCamScript : MonoBehaviour
     public RectTransform SplitScreenBoarder;
     public GameObject playerCams;
 
-    // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
+      
     }
 
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(StartDelay());
+    }
+
+    private IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(2f);
         Vector2 size = SplitScreenBoarder.sizeDelta;
         float interpolation = 1 * Time.deltaTime;
         size.y = Mathf.Lerp(SplitScreenBoarder.sizeDelta.y, 1100, interpolation);

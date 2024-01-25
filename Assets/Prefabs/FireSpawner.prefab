@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3770007610588149602}
   - component: {fileID: 1178342402576747783}
+  - component: {fileID: 6532017430595938727}
   m_Layer: 0
   m_Name: FireSpawner
   m_TagString: Untagged
@@ -111,3 +112,24 @@ MonoBehaviour:
   fireSpawnPos: {fileID: 3597779310160327009}
   fireballPrefab: {fileID: 7580272193791754785, guid: b206a2ae065c2864b8d7d52ad177f2f9, type: 3}
   timeInBetweenFireballs: 1.5
+--- !u!95 &6532017430595938727
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310247696604594141}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
