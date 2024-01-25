@@ -75,7 +75,9 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.CompareTag("Trap"))
         {
+            anim.SetBool("IsDead",  true);
             transform.position = SpawnPos.position;
+            anim.SetBool("IsDead", false);
         }
     }
     
