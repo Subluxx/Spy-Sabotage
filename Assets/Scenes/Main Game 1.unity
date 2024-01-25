@@ -561,6 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assignedPlayer: {fileID: 1935817969}
+  playerScriptHandler: {fileID: 1935817964}
 --- !u!1 &527015864
 GameObject:
   m_ObjectHideFlags: 0
@@ -48335,7 +48336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492545906f8d56438caef4c7b3263fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToApply: {x: 0, y: 0}
   moveSpeed: 4
   forceDamping: 0.01
   rb: {fileID: 1750278166}
@@ -48708,7 +48708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492545906f8d56438caef4c7b3263fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToApply: {x: 0, y: 0}
   moveSpeed: 4
   forceDamping: 0.01
   rb: {fileID: 1935817966}
@@ -48833,6 +48832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assignedPlayer: {fileID: 1750278168}
+  playerScriptHandler: {fileID: 1750278163}
 --- !u!81 &1967357747
 AudioListener:
   m_ObjectHideFlags: 0

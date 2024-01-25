@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Vector2 forceToApply;
+    private Vector2 forceToApply;
     public float moveSpeed;
     public float forceDamping;
     public Rigidbody2D rb;
     Animator anim;
 
+    private bool canMove;
     private bool isMoving;
 
     public Transform SpawnPos;
@@ -22,9 +23,15 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(canMove);
+        if (!canMove)
+        {
+            return;
+        }
+
         if (rb.velocity.magnitude < 0.01)
         {
-           anim.speed = 0.0f;
+            anim.speed = 0.0f;
         }
         else
         {
@@ -67,10 +74,15 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if ( collision.collider.CompareTag("Trap"))
+        if (collision.collider.CompareTag("Trap"))
         {
             transform.position = SpawnPos.position;
         }
+    }
+    
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }
 

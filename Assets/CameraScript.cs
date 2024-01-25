@@ -6,9 +6,11 @@ public class CameraScript : MonoBehaviour
     public Transform assignedPlayer;
     bool reachedPlayer = false;
     float cameraSpeed = 1f;
+    [SerializeField] private GameObject playerScriptHandler;
+
     private void Start()
     {
-        
+        playerScriptHandler.GetComponent<Player>().SetCanMove(false);
     }
     private void Update()
     {
@@ -34,6 +36,7 @@ public class CameraScript : MonoBehaviour
             if (position.x >= assignedPlayer.transform.position.x - .2 && position.x <= assignedPlayer.transform.position.x + .2)
             {
                 reachedPlayer = true;
+                playerScriptHandler.GetComponent<Player>().SetCanMove(true);
             }
         }
     }
