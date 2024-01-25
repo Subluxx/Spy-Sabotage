@@ -13,7 +13,7 @@ public class SpikeTrap : MonoBehaviour
         StartCoroutine(PressurePlateTriggered(duration));
     }
 
-    public IEnumerator PressurePlateTriggered(float duration)
+    public IEnumerator PressurePlateTriggered(float duration) //Changing the animation booleans to progress though each animation sequence
     {
         if (activated == false)
         {
@@ -24,7 +24,7 @@ public class SpikeTrap : MonoBehaviour
             spikeAnim.SetBool("IsOpeningTrap", false);
             spikeAnim.SetBool("IsOpenedTrap", true);
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(duration); //Trap hitbox stays active for a set duration
             spikeAnim.SetBool("IsOpenedTrap", false);
             spikeAnim.SetBool("IsClosingTrap", true);
             yield return new WaitForSeconds(.3f);

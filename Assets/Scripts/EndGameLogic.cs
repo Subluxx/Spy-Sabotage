@@ -8,5 +8,7 @@ public static class EndGameLogic
     {
         // playerOneWon is true if player one won the game
         // fill in with scene change/player win logic
+
+        // Needs import scene manager + sceneManager.LoadScene(int)
     }
 }

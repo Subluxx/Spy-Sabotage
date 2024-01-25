@@ -19,7 +19,7 @@ public class FireSpawner : MonoBehaviour
         timer.IncrementTimer();
         if (timer.CheckAndResetTimer()) // returns true if current time exceeds time specified above
         {
-            GameObject fireball = Instantiate(fireballPrefab, fireSpawnPos.position, fireSpawnPos.rotation);
+            GameObject fireball = Instantiate(fireballPrefab, fireSpawnPos.position, fireSpawnPos.rotation); //Instantiate a new fireball from the prefab
         }
     }
 }

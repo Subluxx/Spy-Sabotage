@@ -26,7 +26,7 @@ public class FireBall : MonoBehaviour
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //Destroyed on any collision
     {
         Destroy(gameObject);
     }
