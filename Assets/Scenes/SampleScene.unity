@@ -5116,6 +5116,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3395212382712540094, guid: c52d86624678e904b9f91160edd70060, type: 3}
+      propertyPath: pressurePlateOn
+      value: 
+      objectReference: {fileID: 64050658, guid: d2780d061e7435b458cf311bac64066d, type: 3}
+    - target: {fileID: 3395212382712540094, guid: c52d86624678e904b9f91160edd70060, type: 3}
+      propertyPath: pressurePlateOff
+      value: 
+      objectReference: {fileID: 1334388064, guid: d2780d061e7435b458cf311bac64066d, type: 3}
+    - target: {fileID: 3395212382712540094, guid: c52d86624678e904b9f91160edd70060, type: 3}
       propertyPath: traps.Array.data[0]
       value: 
       objectReference: {fileID: 1818975504}
