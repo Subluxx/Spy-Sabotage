@@ -17,11 +17,12 @@ public class PressurePlate : MonoBehaviour
 
     private void Start()
     {
-        timer = new Timer(activeTime + 1);
+        timer = new Timer(activeTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        pressurePlateRenderer.sprite = pressurePlateOff;
         collided = true;
         boulder.SetActive(true);
         foreach (GameObject trap in traps) //Make each trap active for a set amount of time
@@ -34,11 +35,10 @@ public class PressurePlate : MonoBehaviour
     {
         if(collided)
         {
-            pressurePlateRenderer.sprite = pressurePlateOn;
             timer.IncrementTimer();
             if (timer.CheckAndResetTimer())
             {
-                pressurePlateRenderer.sprite = pressurePlateOff;
+                pressurePlateRenderer.sprite = pressurePlateOn;
                 collided=false;
             }
         }
