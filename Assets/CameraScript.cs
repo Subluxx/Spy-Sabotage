@@ -31,7 +31,7 @@ public class CameraScript : MonoBehaviour
 
             this.transform.position = position;
 
-            if (position == assignedPlayer.transform.position)
+            if (position.x >= assignedPlayer.transform.position.x - .2 && position.x <= assignedPlayer.transform.position.x + .2)
             {
                 reachedPlayer = true;
             }
