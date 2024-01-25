@@ -7,6 +7,7 @@ using UnityEngine.WSA;
 public class PressurePlate : MonoBehaviour
 {
     [SerializeField] List<GameObject> traps = new List<GameObject>();  //Array of Traps
+    [SerializeField] GameObject boulder;
     [SerializeField] Sprite pressurePlateOff;
     [SerializeField] Sprite pressurePlateOn;
     [SerializeField] SpriteRenderer pressurePlateRenderer;
@@ -22,6 +23,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collided = true;
+        boulder.SetActive(true);
         foreach (GameObject trap in traps) //Make each trap active for a set amount of time
         {
             trap.GetComponent<SpikeTrap>().playAnimation(activeTime);
