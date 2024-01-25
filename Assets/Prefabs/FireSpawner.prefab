@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireSpawnPos: {fileID: 4120802713648406670}
   fireballPrefab: {fileID: 7580272193791754785, guid: b206a2ae065c2864b8d7d52ad177f2f9, type: 3}
-  timeInBetweenFireballs: 1.5
+  timeInBetweenFireballs: 1.39
 --- !u!95 &3196771858579902930
 Animator:
   serializedVersion: 5
@@ -165,7 +165,7 @@ Transform:
   m_Children:
   - {fileID: 7079332445619825306}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7872965763115173055
 SpriteRenderer:
