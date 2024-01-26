@@ -13,5 +13,14 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quit Game");
     } 
+    public void OpenHowToPlay()
+    {
+
+    }
+    public void CloseHowToPlay()
+    {
+
+    }
 }
