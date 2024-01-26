@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     {
         if (!canMove)
         {
+            rb.velocity  = Vector2.zero;
             return;
         }
 
