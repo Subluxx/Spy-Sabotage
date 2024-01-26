@@ -14,27 +14,37 @@ public class Player : MonoBehaviour
 
     private bool canMove;
     private bool isMoving;
+    private bool playDeathAnim;
 
     public Transform SpawnPos;
+    public GameObject deathAnimation;
+
+    private Timer timer;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        timer = new Timer(1.09f);
+
     }
     void Update()
     {
-        if (!canMove)
+        if (playDeathAnim)
         {
-            return;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            timer.IncrementTimer();
+            if (timer.CheckAndResetTimer())
+            {
+                transform.position = SpawnPos.position;
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                playDeathAnim = false;
+            }
         }
 
-        if (rb.velocity.magnitude < 0.01)
+        if (!canMove)
         {
-            anim.speed = 0.0f;
-        }
-        else
-        {
-            anim.speed = 1.0f;
+            rb.velocity = Vector2.zero;
+            return;
         }
 
         Vector2 playerInput = new Vector2();
@@ -75,9 +85,8 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.CompareTag("Trap"))
         {
-            anim.SetBool("IsDead",  true);
-            transform.position = SpawnPos.position;
-            anim.SetBool("IsDead", false);
+            Instantiate(deathAnimation, gameObject.transform);
+            playDeathAnim = true;
         }
     }
     
