@@ -25,9 +25,9 @@ public class StartCamScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Vector2 size = SplitScreenBoarder.sizeDelta;
         float interpolation = 1 * Time.deltaTime;
-        size.y = Mathf.Lerp(SplitScreenBoarder.sizeDelta.y, 1100, interpolation);
+        size.y = Mathf.Lerp(SplitScreenBoarder.sizeDelta.y, 1500, interpolation);
         SplitScreenBoarder.sizeDelta = size;
-        if (SplitScreenBoarder.sizeDelta.y > 1080)
+        if (SplitScreenBoarder.sizeDelta.y > 1480)
         {
             playerCams.SetActive(true);
             gameObject.SetActive(false);

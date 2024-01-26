@@ -30,11 +30,13 @@ public class Player : MonoBehaviour
     {
         if (playDeathAnim)
         {
+            canMove = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             timer.IncrementTimer();
             if (timer.CheckAndResetTimer())
             {
                 transform.position = SpawnPos.position;
+                canMove = true;
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
                 playDeathAnim = false;
             }

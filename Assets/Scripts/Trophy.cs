@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Trophy : MonoBehaviour
 {
+
+    public Transform canvas;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player1")) EndGameLogic.HandleEndGame(true);
-        if (collision.collider.CompareTag("Player2")) EndGameLogic.HandleEndGame(false);
+        canvas.transform.gameObject.SetActive(true);
     }
 
 }

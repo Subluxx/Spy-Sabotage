@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EndGameLogic 
+public class EndGameLogic : MonoBehaviour
 {
-    public static void HandleEndGame(bool playerOneWon)
-    {
-        // playerOneWon is true if player one won the game
-        // fill in with scene change/player win logic
+    public GameObject endgame;
 
-        // Needs import scene manager + sceneManager.LoadScene(int)
+    public void HandleEndGame()
+    {
+        endgame.transform.gameObject.SetActive(true);
     }
 }
