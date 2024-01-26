@@ -22,7 +22,7 @@ public class StartCamScript : MonoBehaviour
 
     private IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Vector2 size = SplitScreenBoarder.sizeDelta;
         float interpolation = 1 * Time.deltaTime;
         size.y = Mathf.Lerp(SplitScreenBoarder.sizeDelta.y, 1100, interpolation);
